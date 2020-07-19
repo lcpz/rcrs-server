@@ -81,7 +81,7 @@ public class ComponentManager implements ConnectionManagerListener,
 
 	/**
 	 * Create a ComponentManager.
-	 * 
+	 *
 	 * @param kernel
 	 *            The kernel.
 	 * @param world
@@ -105,7 +105,7 @@ public class ComponentManager implements ConnectionManagerListener,
 
 	/**
 	 * Register an agent-controlled entity.
-	 * 
+	 *
 	 * @param entity
 	 *            The entity that is agent-controlled.
 	 * @param visibleOnStartup
@@ -137,7 +137,7 @@ public class ComponentManager implements ConnectionManagerListener,
 	/**
 	 * Wait for all agents to connect. This method will block until all agent
 	 * entities have controllers.
-	 * 
+	 *
 	 * @throws InterruptedException
 	 *             If the thread is interrupted.
 	 */
@@ -168,7 +168,7 @@ public class ComponentManager implements ConnectionManagerListener,
 
 	/**
 	 * Wait until all simulators have acknowledged.
-	 * 
+	 *
 	 * @throws InterruptedException
 	 *             If the thread is interrupted.
 	 */
@@ -184,7 +184,7 @@ public class ComponentManager implements ConnectionManagerListener,
 
 	/**
 	 * Wait until all viewers have acknowledged.
-	 * 
+	 *
 	 * @throws InterruptedException
 	 *             If the thread is interrupted.
 	 */
@@ -432,7 +432,7 @@ public class ComponentManager implements ConnectionManagerListener,
 		/**
 		 * Used to send info other than world model's to simulators. Information
 		 * such as Aftershocks' properties and etc.
-		 * 
+		 *
 		 * @param sim
 		 * @throws UncompatibleScenarioException
 		 */

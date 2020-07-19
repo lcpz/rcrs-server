@@ -692,6 +692,6 @@ public class GMLMapViewer extends JComponent {
 
     public void setPaintNodes(boolean paintNodes) {
 		this.paintNodes = paintNodes;
-		
+
 	}
 }

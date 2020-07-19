@@ -40,7 +40,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a 32-bit integer to an OutputStream, big-endian style.
-	 * 
+	 *
 	 * @param i
 	 *            The integer to write.
 	 * @param out
@@ -58,7 +58,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a 32-bit integer to a DataOutput, big-endian style.
-	 * 
+	 *
 	 * @param i
 	 *            The integer to write.
 	 * @param out
@@ -73,7 +73,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a 32-bit integer to a byte array, big-endian style.
-	 * 
+	 *
 	 * @param i
 	 *            The integer to write.
 	 * @param out
@@ -91,7 +91,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a 32-bit integer from an input stream, big-endian style.
-	 * 
+	 *
 	 * @param in
 	 *            The InputStream to read from.
 	 * @return The next big-endian, 32-bit integer in the stream.
@@ -122,7 +122,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a 32-bit integer from a DataInput.
-	 * 
+	 *
 	 * @param in
 	 *            The DataInput to read from.
 	 * @return The next big-endian, 32-bit integer in the stream.
@@ -137,7 +137,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a 32-bit integer from an input stream, little-endian style.
-	 * 
+	 *
 	 * @param in
 	 *            The InputStream to read from.
 	 * @return The next little-endian, 32-bit integer in the stream.
@@ -168,7 +168,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a 32-bit integer from a byte array, big-endian style.
-	 * 
+	 *
 	 * @param in
 	 *            The buffer to read from.
 	 * @param offset
@@ -183,7 +183,7 @@ public final class EncodingTools {
 	/**
 	 * Read a 32-bit integer from a byte array, big-endian style. This is
 	 * equivalent to calling {@link #readInt32(byte[], int) readInt32(in, 0)}.
-	 * 
+	 *
 	 * @param in
 	 *            The buffer to read from.
 	 * @return The first big-endian, 32-bit integer in the buffer.
@@ -194,7 +194,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a String to an OutputStream. Strings are always in UTF-8.
-	 * 
+	 *
 	 * @param s
 	 *            The String to write.
 	 * @param out
@@ -211,7 +211,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a String to a DataOutput. Strings are always in UTF-8.
-	 * 
+	 *
 	 * @param s
 	 *            The String to write.
 	 * @param out
@@ -227,7 +227,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a String to a byte array. Strings are always in UTF-8.
-	 * 
+	 *
 	 * @param s
 	 *            The String to write.
 	 * @param out
@@ -243,7 +243,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a String from an InputStream.
-	 * 
+	 *
 	 * @param in
 	 *            The InputStream to read.
 	 * @return The string that was read.
@@ -269,7 +269,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a String from a DataInput.
-	 * 
+	 *
 	 * @param in
 	 *            The DataInput to read.
 	 * @return The string that was read.
@@ -288,7 +288,7 @@ public final class EncodingTools {
 	/**
 	 * Read a String from a byte array. This is equivalent to calling
 	 * {@link #readString(byte[], int) readString(in, 0)}.
-	 * 
+	 *
 	 * @param in
 	 *            The byte array to read.
 	 * @return The string that was read.
@@ -299,7 +299,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a String from a byte array.
-	 * 
+	 *
 	 * @param in
 	 *            The byte array to read.
 	 * @param offset
@@ -315,7 +315,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a fixed number of bytes from an InputStream into an array.
-	 * 
+	 *
 	 * @param size
 	 *            The number of bytes to read.
 	 * @param in
@@ -340,7 +340,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a fixed number of bytes from a DataInput into an array.
-	 * 
+	 *
 	 * @param size
 	 *            The number of bytes to read.
 	 * @param in
@@ -357,7 +357,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a double to an OutputStream.
-	 * 
+	 *
 	 * @param d
 	 *            The double to write.
 	 * @param out
@@ -380,7 +380,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a double to a DataOutput.
-	 * 
+	 *
 	 * @param d
 	 *            The double to write.
 	 * @param out
@@ -394,7 +394,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a double to a byte array.
-	 * 
+	 *
 	 * @param d
 	 *            The double to write.
 	 * @param out
@@ -416,7 +416,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a double from an input stream.
-	 * 
+	 *
 	 * @param in
 	 *            The InputStream to read from.
 	 * @return The next double in the stream.
@@ -442,7 +442,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a double from a DataInput.
-	 * 
+	 *
 	 * @param in
 	 *            The DataInput to read from.
 	 * @return The next double in the stream.
@@ -457,7 +457,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a double from a byte array.
-	 * 
+	 *
 	 * @param in
 	 *            The buffer to read from.
 	 * @param offset
@@ -478,7 +478,7 @@ public final class EncodingTools {
 	/**
 	 * Read a double from a byte array. This is equivalent to calling
 	 * {@link #readDouble(byte[], int) readDouble(in, 0)}.
-	 * 
+	 *
 	 * @param in
 	 *            The buffer to read from.
 	 * @return The first double in the buffer.
@@ -489,7 +489,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a boolean to an OutputStream.
-	 * 
+	 *
 	 * @param b
 	 *            The boolean to write.
 	 * @param out
@@ -504,7 +504,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a boolean to a DataOutput.
-	 * 
+	 *
 	 * @param b
 	 *            The boolean to write.
 	 * @param out
@@ -519,7 +519,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a boolean to a byte array.
-	 * 
+	 *
 	 * @param b
 	 *            The boolean to write.
 	 * @param out
@@ -533,7 +533,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a boolean from an input stream.
-	 * 
+	 *
 	 * @param in
 	 *            The InputStream to read from.
 	 * @return The next boolean in the stream.
@@ -549,7 +549,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a boolean from a DataInput.
-	 * 
+	 *
 	 * @param in
 	 *            The DataInput to read from.
 	 * @return The next boolean in the stream.
@@ -564,7 +564,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a boolean from a byte array.
-	 * 
+	 *
 	 * @param in
 	 *            The buffer to read from.
 	 * @param offset
@@ -578,7 +578,7 @@ public final class EncodingTools {
 	/**
 	 * Read a boolean from a byte array. This is equivalent to calling
 	 * {@link #readBoolean(byte[], int) readBoolean(in, 0)}.
-	 * 
+	 *
 	 * @param in
 	 *            The buffer to read from.
 	 * @return The first boolean in the buffer.
@@ -591,7 +591,7 @@ public final class EncodingTools {
 	 * Call InputStream.skip until exactly <code>count</code> bytes have been
 	 * skipped. If InputStream.skip ever returns a negative number then an
 	 * EOFException is thrown.
-	 * 
+	 *
 	 * @param in
 	 *            The InputStream to skip.
 	 * @param count
@@ -615,7 +615,7 @@ public final class EncodingTools {
 	 * Call DataInput.skip until exactly <code>count</code> bytes have been
 	 * skipped. If DataInput.skip ever returns a negative number then an
 	 * EOFException is thrown.
-	 * 
+	 *
 	 * @param in
 	 *            The DataInput to skip.
 	 * @param count
@@ -636,7 +636,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write an entity to a stream.
-	 * 
+	 *
 	 * @param e
 	 *            The entity to write.
 	 * @param out
@@ -664,7 +664,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write an entity to a DataOutput.
-	 * 
+	 *
 	 * @param e
 	 *            The entity to write.
 	 * @param out
@@ -691,7 +691,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read an entity from a stream.
-	 * 
+	 *
 	 * @param in
 	 *            The InputStream to read from.
 	 * @return A new Entity, or null if the entity URN is not recognised.
@@ -716,7 +716,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read an entity from a DataInput.
-	 * 
+	 *
 	 * @param in
 	 *            The DataInput to read from.
 	 * @return A new Entity, or null if the entity URN is not recognised.
@@ -741,7 +741,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a property to a stream.
-	 * 
+	 *
 	 * @param p
 	 *            The property to write.
 	 * @param out
@@ -767,7 +767,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a property to a DataOutput.
-	 * 
+	 *
 	 * @param p
 	 *            The property to write.
 	 * @param out
@@ -793,7 +793,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a property from a stream.
-	 * 
+	 *
 	 * @param in
 	 *            The InputStream to read from.
 	 * @return A new Property, or null if the property URN is not recognised.
@@ -819,7 +819,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a property from a DataInput.
-	 * 
+	 *
 	 * @param in
 	 *            The DataInput to read from.
 	 * @return A new Property, or null if the property URN is not recognised.
@@ -845,7 +845,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a message to a stream.
-	 * 
+	 *
 	 * @param m
 	 *            The message to write.
 	 * @param out
@@ -871,7 +871,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a message to a DataOutput.
-	 * 
+	 *
 	 * @param m
 	 *            The message to write.
 	 * @param out
@@ -897,7 +897,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a message from a stream.
-	 * 
+	 *
 	 * @param in
 	 *            The InputStream to read from.
 	 * @return A new Message, or null if the message URN is not recognised.
@@ -918,7 +918,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a message from a DataInput.
-	 * 
+	 *
 	 * @param in
 	 *            The DataInput to read from.
 	 * @return A new Message, or null if the message URN is not recognised.
@@ -939,7 +939,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a 32-bit float from an input stream, big-endian style.
-	 * 
+	 *
 	 * @param in
 	 *            The InputStream to read from.
 	 * @return The next big-endian, 32-bit float in the stream.
@@ -955,7 +955,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a 32-bit float to an OutputStream, big-endian style.
-	 * 
+	 *
 	 * @param f
 	 *            The float to write.
 	 * @param out
@@ -972,7 +972,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a 32-bit float to a DataOutput, big-endian style.
-	 * 
+	 *
 	 * @param f
 	 *            The float to write.
 	 * @param out
@@ -988,7 +988,7 @@ public final class EncodingTools {
 
 	/**
 	 * Write a 32-bit float to a byte array, big-endian style.
-	 * 
+	 *
 	 * @param f
 	 *            The float to write.
 	 * @param out
@@ -1006,7 +1006,7 @@ public final class EncodingTools {
 
 	/**
 	 * Read a 32-bit float from a DataInput.
-	 * 
+	 *
 	 * @param in
 	 *            The DataInput to read from.
 	 * @return The next big-endian, 32-bit float in the stream.

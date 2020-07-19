@@ -284,7 +284,7 @@ public class ChannelCommunicationModelTest {
 
     @Test
     public void testSubscriptionLimits() {
-        model.initialise(createRadioConfig(), createWorldModel());        
+        model.initialise(createRadioConfig(), createWorldModel());
         commands.add(new AKSubscribe(civ1.getID(), 1, 0, 1));
         commands.add(new AKSubscribe(civ2.getID(), 1, 0, 1, 2));
         commands.add(new AKSubscribe(fb1.getID(), 1, 0, 1));
@@ -328,7 +328,7 @@ public class ChannelCommunicationModelTest {
 
     @Test
     public void testSubscriptionRemovesOldChannels() {
-        model.initialise(createRadioConfig(), createWorldModel());        
+        model.initialise(createRadioConfig(), createWorldModel());
         // Subscribe to channel 0
         commands.add(new AKSubscribe(civ1.getID(), 1, 0));
         AKSpeak speak1 = new AKSpeak(civ1.getID(), 1, 0, TEST_BYTES);
@@ -353,7 +353,7 @@ public class ChannelCommunicationModelTest {
 
     @Test
     public void testBadSubscriptionKeepsOKChannels() {
-        model.initialise(createRadioConfig(), createWorldModel());        
+        model.initialise(createRadioConfig(), createWorldModel());
         // Subscribe to channel 0
         commands.add(new AKSubscribe(civ1.getID(), 1, 0));
         AKSpeak speak1 = new AKSpeak(civ1.getID(), 1, 0, TEST_BYTES);
@@ -379,7 +379,7 @@ public class ChannelCommunicationModelTest {
 
     @Test
     public void testSubscribeFromNonAgent() {
-        model.initialise(createRadioConfig(), createWorldModel());        
+        model.initialise(createRadioConfig(), createWorldModel());
         // Subscribe to channel 0
         commands.add(new AKSubscribe(civ1.getID(), 1, 0));
         commands.add(new AKSubscribe(road.getID(), 1, 0));

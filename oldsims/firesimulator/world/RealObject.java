@@ -14,7 +14,7 @@ public abstract class RealObject extends RescueObject{
 	}
 
 	abstract public int getX();
-	
+
 	abstract public int getY();
 
 }

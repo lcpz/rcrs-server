@@ -68,7 +68,7 @@ class DayData(object):
             for t in self.prev_day.teams:
                 self.total_ranks[t] += self.prev_day.total_ranks[t]
                 self.total_scores[t] += self.prev_day.total_scores[t]
-                
+
         sorted_teams = sorted(self.teams, key=lambda t: -self.total_scores[t])
         sorted_teams = sorted(sorted_teams, key=lambda t: -self.total_ranks[t])
         for i, t in enumerate(sorted_teams):
@@ -86,7 +86,7 @@ class DayData(object):
                 single_results.append((t.final_score, t.rank))
             except:
                 single_results.append((0, -1))
-                
+
         return single_results, (self.total_scores[team], self.total_ranks[team], self.final_rank[team])
 
     def __str__(self):
@@ -98,7 +98,7 @@ class DayData(object):
             ts += " | %7.3f  %3d | %2d " % (tot_score, tot_rank, rank)
             s += ts + "\n"
         return s
-    
+
 
 def get_mappack():
     path = "maps2011.tar.gz"
@@ -106,7 +106,7 @@ def get_mappack():
         return 0, None
     size = os.stat(path)[stat.ST_SIZE]
     return size, path
-       
+
 if __name__ == '__main__':
     all_teams = make_html.all_teams
 
@@ -126,7 +126,7 @@ if __name__ == '__main__':
             data.add_day(merge_data)
         datadict[cdata['name']] = data
         runs.append(data)
-    
+
     # day1 = DayData("Preliminaries Day 1", "Preliminary1", ["VC1", "Paris1", "Kobe1", "Berlin1", "Istanbul1"], all_teams)
     # day2 = DayData("Preliminaries Day 2", "Preliminary2", ["Kobe2", "Paris2", "Istanbul2", "Berlin2", "VC2"], all_teams, 8)
     # day2.add_day(day1)
@@ -166,7 +166,7 @@ if __name__ == '__main__':
         elif day.highlight is not None:
             if final_rank <= day.highlight:
                 classes.append("qualified")
-            
+
 
         return results, classes
 
@@ -183,7 +183,7 @@ if __name__ == '__main__':
             result.append('<th colspan="2">%s</th>' % day.prev_day.shortname)
             result2.append("<th>Score</th>")
             result2.append("<th>Points</th>")
-            
+
         result.append('<th colspan="2">Total</th>')
         result2.append("<th>Score</th>")
         result2.append("<th>Points</th>")
@@ -206,4 +206,4 @@ if __name__ == '__main__':
 
     print template % locals()
 
-        
+

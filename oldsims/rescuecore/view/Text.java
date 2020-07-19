@@ -26,7 +26,7 @@ public class Text {
 	private String string;
 	private int x;
 	private int y;
-	
+
 	public Text(String str, int x, int y){
 		this.x = x;
 		this.y = y;

@@ -203,6 +203,6 @@ public class Map extends JComponent {
 				for (int j=0;j<o.length;++j) all.add(o[j]);
 			}
 		}
-		return all.toArray();		
+		return all.toArray();
 	}
 }

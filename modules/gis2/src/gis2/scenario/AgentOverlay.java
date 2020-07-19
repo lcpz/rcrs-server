@@ -26,7 +26,7 @@ public class AgentOverlay implements Overlay {
 
 	/**
 	 * Construct an AgentOverlay.
-	 * 
+	 *
 	 * @param editor
 	 *            The scenario editor.
 	 */

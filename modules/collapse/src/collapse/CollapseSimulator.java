@@ -542,21 +542,21 @@ public class CollapseSimulator extends StandardSimulator implements
 		Vector2D wallDirection = wallLine.getDirection();
 		Vector2D offset = wallDirection.getNormal().normalised().scale(-d);
 		Path2D path = new Path2D.Double();
-                
+
 		Point2D right = wallLine.getOrigin();
 		Point2D left = wallLine.getEndPoint();
-                
+
 		Point2D first = left.plus(offset.scale(-1));
 		Point2D second = right.plus(offset.scale(-1));
 		Point2D third = right.plus(offset);
 		Point2D fourth = left.plus(offset);
-                
+
 		path.moveTo(first.getX(), first.getY());
 		path.lineTo(second.getX(), second.getY());
 		path.lineTo(third.getX(), third.getY());
 		path.lineTo(fourth.getX(), fourth.getY());
 		path.closePath();
-                
+
 		java.awt.geom.Area wallArea = new java.awt.geom.Area(path);
 		areaList.add(wallArea);
 		// Also add circles at each corner

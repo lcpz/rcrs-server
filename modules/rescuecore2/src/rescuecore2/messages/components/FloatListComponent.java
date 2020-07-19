@@ -25,7 +25,7 @@ public class FloatListComponent extends AbstractMessageComponent {
 
 	/**
 	 * Construct an FloatListComponent with no data.
-	 * 
+	 *
 	 * @param name
 	 *            The name of the component.
 	 */
@@ -36,7 +36,7 @@ public class FloatListComponent extends AbstractMessageComponent {
 
 	/**
 	 * Construct an FloatListComponent with a list of floats.
-	 * 
+	 *
 	 * @param name
 	 *            The name of the component.
 	 * @param data
@@ -49,7 +49,7 @@ public class FloatListComponent extends AbstractMessageComponent {
 
 	/**
 	 * Get the list of Floats in this component.
-	 * 
+	 *
 	 * @return An immutable view of the list of Floats.
 	 */
 	public List<Float> getValues() {
@@ -58,7 +58,7 @@ public class FloatListComponent extends AbstractMessageComponent {
 
 	/**
 	 * Set the list of values in this component.
-	 * 
+	 *
 	 * @param newData
 	 *            The new set of values.
 	 */
@@ -68,7 +68,7 @@ public class FloatListComponent extends AbstractMessageComponent {
 
 	/**
 	 * Set the list of values in this component.
-	 * 
+	 *
 	 * @param newData
 	 *            The new set of values.
 	 */
@@ -118,6 +118,6 @@ public class FloatListComponent extends AbstractMessageComponent {
 //			float f2 = values2.get(i);
 //			System.out.println(f1 + " , " + f2 + " => " + (f1 == f2));
 //		}
-//		
+//
 //	}
 }

@@ -74,8 +74,8 @@ public class FireBrigade extends MovingObject {
 					firebrigade.getID()<this.getID())
 					return false;
 		}
-		
-		if (getWaterQuantity() + REFILL_HYDRANT_QUANTITY> MAX_WATER_QUANTITY) 
+
+		if (getWaterQuantity() + REFILL_HYDRANT_QUANTITY> MAX_WATER_QUANTITY)
 			setWaterQuantity(MAX_WATER_QUANTITY);
 		else
 			setWaterQuantity(getWaterQuantity() + REFILL_HYDRANT_QUANTITY);
@@ -84,12 +84,12 @@ public class FireBrigade extends MovingObject {
 	public boolean refillInRefuge() {
 		if (!(getLocation().isRefuge()))
 			return false;
-		
+
 		int fr = ((Refuge) getLocation()).getFieryness();
 		if (fr == 3 || fr == 6 || fr == 7)
 			return false;
-		
-		
+
+
 		if (getWaterQuantity() + REFILL_QUANTITY > MAX_WATER_QUANTITY) {
 			setWaterQuantity(MAX_WATER_QUANTITY);
 		} else {
@@ -101,16 +101,16 @@ public class FireBrigade extends MovingObject {
 //		if (!getCurrentAction().equals("AK_REST")){
 //			return false;
 //		}unusable because the old simulator don't know the last action
-		
+
 		if (getLocation() == null)
 			return false;
-		
+
 		if(refillInHydrant())
 			return true;
-		
+
 		if(refillInRefuge())
 			return true;
-		
+
 		return false;
 	}
 }

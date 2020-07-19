@@ -33,7 +33,7 @@ import javax.swing.SwingUtilities;
  */
 
 public class FireSimulatorGUI extends JPanel {
-	
+
 	private ScreenTransformExt transform = null;
 	private ArrayList<JCheckBox> layerCheckBoxes = null;
 	private JTextArea stringDataTextArea = null;
@@ -45,16 +45,16 @@ public class FireSimulatorGUI extends JPanel {
 	private DrawingPanel drawingPanel = null;
 	private int mouseX = 0;
 	private int mouseY = 0;
-	
+
 	private final ItemListener layerCheckBoxItemListener = new ItemListener() {
 		@Override
 		public void itemStateChanged(ItemEvent e) {
 			refresh();
 		}
 	};
-	
+
 	public final static String TAB_ALL = "All";
-	
+
 	private void addLayers() {
 		addLayer(TAB_ALL, Buildings.class, true);
 		addLayer(TAB_ALL, BuildingInfo.class, true);
@@ -66,7 +66,7 @@ public class FireSimulatorGUI extends JPanel {
 		addLayer(TAB_ALL, ConnectedBuildings.class, false);
 		addLayer(TAB_ALL, ConnectedBuildingsWeighted.class, true);
 	}
-	
+
 	public void addLayer(String tabName, Class c, boolean de) {
 		String packageName = c.getPackage().getName();
 		String className = c.getName().replace(packageName + ".", "");
@@ -84,7 +84,7 @@ public class FireSimulatorGUI extends JPanel {
 		panel.add(chb);
 		layerCheckBoxes.add(chb);
 	}
-	
+
 	public FireSimulatorGUI(Simulator simulator, World world) {
 		this.simulator = simulator;
 		this.world = world;
@@ -96,16 +96,16 @@ public class FireSimulatorGUI extends JPanel {
 		layersScrollPane.setPreferredSize(new Dimension(300, 300));
 		JScrollPane stringDataScrollPane = new JScrollPane(stringDataTextArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 		stringDataScrollPane.setPreferredSize(new Dimension(300, 300));
-		
+
 		this.setLayout(new BorderLayout());
 		this.add(layersScrollPane, BorderLayout.WEST);
 		this.add(drawingPanel, BorderLayout.CENTER);
 		this.add(stringDataScrollPane, BorderLayout.EAST);
-		
+
 		addLayers();
-		
+
 	}
-	
+
 	public void refresh() {
 		repaint();
 		try {
@@ -119,7 +119,7 @@ public class FireSimulatorGUI extends JPanel {
 			e.printStackTrace();
 		}
 	}
-		
+
 	class DrawingPanel extends JPanel {
 
 		private final int DEFAULT_WIDTH = 480;

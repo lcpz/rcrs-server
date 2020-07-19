@@ -37,6 +37,6 @@ public class ScreenTransform {
     public int toScreenY(int rescueY) {
 		double yPos = ((double)(rescueY-minY))/((double)yRange);
 		double result = yPos*height;
-		return (int)(height - result);	
+		return (int)(height - result);
     }
 }

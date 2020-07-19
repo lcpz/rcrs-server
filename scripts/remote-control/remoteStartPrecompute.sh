@@ -21,7 +21,7 @@ cd $HOME/$CODEDIR/$TEAM
 
 echo Starting precomputation on machine $(hostname)
 
-# firebrigade 
+# firebrigade
 if (( $TYPE == 1)); then
     echo "Running: /bin/sh \"precompute.sh\" 1 0 0 0 0 0 $HOST 2>&1 | tee $LOGFILE"
     /bin/sh "precompute.sh" 1 0 0 0 0 0 $HOST 2>&1 | tee $LOGFILE
@@ -40,7 +40,7 @@ if (( $TYPE == 3)); then
 fi
 
 
-# # firebrigade 
+# # firebrigade
 # if (( $TYPE == 1)); then
 #     echo "Running: /bin/sh \"start.sh\" 1 $HOST 2>&1 | tee $LOGFILE"
 #     /bin/sh "start.sh" 1 $HOST 2>&1 | tee $LOGFILE

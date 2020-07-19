@@ -19,7 +19,7 @@ if [[ $LOGFILE == *.gz ]]; then
     fi;
 fi;
 
-cd $HOME/$KERNELDIR/boot 
+cd $HOME/$KERNELDIR/boot
 ./logextract.sh $LOGFILE $MAP_EVALDIR/$TEAM
 cd $MAP_EVALDIR
 

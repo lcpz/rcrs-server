@@ -236,7 +236,7 @@ public class Layer {
 		//	if (dirty || image==null) {
 		//	image = null;
 		//	    if (image==null || image.getWidth()!=width || image.getHeight()!=height) image = new BufferedImage(width,height,BufferedImage.TYPE_INT_ARGB);
-	    
+
 		//	    paint(image.createGraphics(),transform);
 	    //	    dirty = false;
 	    //	}

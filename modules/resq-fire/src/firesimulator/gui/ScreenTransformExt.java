@@ -44,7 +44,7 @@ public class ScreenTransformExt extends ScreenTransform {
 			yToScreen(0) - yToScreen(h)
 		);
 	}
-	
+
 	public void drawTransformedLine(Graphics2D g2, double x0, double y0, double x1, double y1) {
 		g2.drawLine(
 			this.xToScreen(x0),
@@ -53,7 +53,7 @@ public class ScreenTransformExt extends ScreenTransform {
 			this.yToScreen(y1)
 		);
 	}
-	
+
 	public void fillTransformedOvalFixedRadius(Graphics2D g2, double x0, double y0, double r) {
 		g2.fillOval(
 			(int) (this.xToScreen(x0) - r),
@@ -62,5 +62,5 @@ public class ScreenTransformExt extends ScreenTransform {
 			(int) (2 * r)
 		);
 	}
-    
+
 }

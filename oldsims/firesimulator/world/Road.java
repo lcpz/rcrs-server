@@ -17,13 +17,13 @@ public class Road extends Edge {
     int linesToTail;
     StreetNode head;
     StreetNode tail;
-	
+
     public Road(int id) {
         super(id);
         head=null;
         tail=null;
     }
-	
+
     public void initialize(World world){
         head=((StreetNode)world.getObject(getHeadID()));
         tail=((StreetNode)world.getObject(getTailID()));
@@ -32,39 +32,39 @@ public class Road extends Edge {
             System.exit(1);
         }
     }
-	
+
     public void setHead(StreetNode node){
         head=node;
     }
-	
+
     public void setTail(StreetNode node){
         tail=node;
     }
-	
+
     public StreetNode getHead(){
         return head;
     }
-	
+
     public StreetNode getTail(){
         return tail;
     }
-	
+
     public String getType(){
         return "ROAD";
     }
-	
+
     public void setWidth(int width){
         this.width=width;
     }
-	
+
     public void setBlock(int block){
         this.block=block;
     }
-	
+
     public void setLinesToHead(int lines){
         linesToHead=lines;
     }
-	
+
     public void setLinesToTail(int lines){
         linesToTail=lines;
     }

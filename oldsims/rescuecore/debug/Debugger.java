@@ -202,7 +202,7 @@ public class Debugger extends JPanel {
 		frame.addWindowListener(new WindowAdapter(){
 				public void windowClosing(WindowEvent e){System.exit(0);}
 			});
-		
+
 		Toolkit t = Toolkit.getDefaultToolkit();
 		Dimension size = t.getScreenSize();
 		frame.setSize((int)size.getWidth(),(int)size.getHeight());

@@ -171,7 +171,7 @@ public class PlaceBlockages {
 	}
 
 	private static class BigRoadRenderer implements MapRenderer {
-		public boolean canRender(Object o) { 
+		public boolean canRender(Object o) {
 			return o instanceof Road;
 		}
 

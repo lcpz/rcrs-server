@@ -66,7 +66,7 @@ class TeamEntry(object):
         if self.valid():
             for line in open(os.path.join(self.dir, "init-score.txt")):
                 self.init_score = float(line.strip())
-               
+
             for line in open(os.path.join(self.dir, "scores.txt")):
                 self.scores = [float(s) for s in line.split()]
             self.last_score = self.scores[-1]
@@ -77,7 +77,7 @@ class TeamEntry(object):
                 self.running = False
             except:
                 pass
-                
+
             self.max_time = len(self.scores) - 1
 
     def valid(self):
@@ -162,12 +162,12 @@ class MapData(object):
             for prev in prev_teams:
                 prev.rank = i
             t.rank = i
-                
+
             prev_teams.append(t)
             prev_score = t.final_score
             i += 1
 
-        
+
         self.step_ranking(self.entries)
         # for i, t in enumerate(sorted_by_score):
         #     t.rank = i+1
@@ -249,7 +249,7 @@ def list_to_row(l, elem='td'):
         cl_string = ""
     delim = "</%s><%s>" % (elem, elem)
     return "<tr %s><%s>" % (cl_string, elem) + delim.join(elems) + "</%s></tr>" % elem
-        
+
 if __name__ == '__main__':
     mapname = sys.argv[1]
 
@@ -268,7 +268,7 @@ if __name__ == '__main__':
         map_download = '<a href="%s">Download map</a> (Size: %s)' % (map_path, sizeof_fmt(map_size))
 
     sorted_by_rank = sorted(data.entries, key=lambda t: -t.rank)
-        
+
     def make_table_row(team, count):
         classes = []
         if team == sorted_by_rank[0]:
@@ -300,7 +300,7 @@ if __name__ == '__main__':
                 pass
         else:
             result.append("")
-            
+
             #result += [""] * (count - len(result))
         return result, classes
 

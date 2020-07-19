@@ -104,7 +104,7 @@ public class HumanLayer extends StandardEntityViewLayer<Human> {
            	 	shape = new Ellipse2D.Double(x - SIZE / 3, y - SIZE / 3, SIZE/3*2, SIZE/3*2);
             else
             	shape = new Ellipse2D.Double(x - SIZE / 2, y - SIZE / 2, SIZE, SIZE);
-            
+
             g.setColor(adjustColour(getColour(h), h.isHPDefined()? h.getHP():10000));
             g.fill(shape);
             g.setColor(getColour(h));
@@ -132,7 +132,7 @@ public class HumanLayer extends StandardEntityViewLayer<Human> {
     	if(HUMAN_SORTER==null)
         		HUMAN_SORTER= new HumanSorter(world);
    		Collections.sort(entities, HUMAN_SORTER);
-    	
+
     }
 
     /**
@@ -271,11 +271,11 @@ public class HumanLayer extends StandardEntityViewLayer<Human> {
         	if (h1 instanceof Civilian && !(h2 instanceof Civilian)) {
                 return -1;
             }
-        	
+
             if (h2 instanceof Civilian && !(h1 instanceof Civilian)) {
                 return 1;
             }
-            
+
             if(h1.isHPDefined()&&h2.isHPDefined())
             	return h2.getHP()-h1.getHP();
             return h1.getID().getValue() - h2.getID().getValue();

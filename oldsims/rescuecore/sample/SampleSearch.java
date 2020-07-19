@@ -65,7 +65,7 @@ public class SampleSearch {
 		for (int i=0;i<result.length;++i) {
 			result[i] = ((RescueObject)path.pop()).getID();
 		}
-		return result;	
+		return result;
     }
 
     /**

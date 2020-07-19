@@ -47,7 +47,7 @@ public class MapFiles {
 	public static Node[] loadNodes() throws IOException {
 		return loadNodes("node.bin");
 	}
-	
+
 	public static Node[] loadNodes(File parentDir) throws IOException {
 		return loadNodes(parentDir.getAbsolutePath() + File.separator + "node.bin");
 	}
@@ -95,13 +95,13 @@ public class MapFiles {
 		}
 		finally {
 			if (in!=null) in.close();
-		}		
+		}
 	}
 
 	public static Road[] loadRoads() throws IOException {
 		return loadRoads("road.bin");
 	}
-	
+
 	public static Road[] loadRoads(File parentDir) throws IOException {
 		return loadRoads(parentDir.getAbsolutePath() + File.separator + "road.bin");
 	}
@@ -153,7 +153,7 @@ public class MapFiles {
 	public static Building[] loadBuildings(File parentDir) throws IOException {
 		return loadBuildings(parentDir.getAbsolutePath() + File.separator + "building.bin");
 	}
-	
+
 	public static Building[] loadBuildings(String file) throws IOException {
 		System.out.print("Loading buildings from "+file);
 		InputStream in = null;
@@ -199,7 +199,7 @@ public class MapFiles {
 			if (in!=null) in.close();
 		}
 	}
-	
+
 	public static void writeBuildings(String file, Building[] bs) throws IOException{
 		BufferedOutputStream out = null;
 		try {
@@ -237,7 +237,7 @@ public class MapFiles {
 			if (out!=null) out.close();
 		}
 	}
-	
+
 
 	public static void writeNodes(String file, Node[] ns) throws IOException{
 		BufferedOutputStream out = null;
@@ -309,7 +309,7 @@ public class MapFiles {
 			if (out!=null) out.close();
 		}
 	}
-	
+
 	public static void writeGISMotionlessObjects(PrintWriter out, FireStation[] fire, PoliceOffice[] police, AmbulanceCenter[] ambulance, Refuge[] refuge) {
 		out.println("# Motionless Objects");
 		for (int i=0;i<fire.length;++i) writeFixedObjectData(out,GIS_TYPE_FIRE_STATION,fire[i]);
@@ -317,7 +317,7 @@ public class MapFiles {
 		for (int i=0;i<ambulance.length;++i) writeFixedObjectData(out,GIS_TYPE_AMBULANCE_CENTER,ambulance[i]);
 		for (int i=0;i<refuge.length;++i) writeFixedObjectData(out,GIS_TYPE_REFUGE,refuge[i]);
 	}
-    
+
 	public static void writeGISMovingObjects(PrintWriter out, FireBrigade[] fire, PoliceForce[] police, AmbulanceTeam[] ambulance, Civilian[] civ, Memory m) {
 		out.println("# Moving Objects");
 		for (int i=0;i<civ.length;++i) writeMovingObjectData(out,GIS_TYPE_CIVILIAN,m.lookup(civ[i].getPosition()),m);
@@ -372,7 +372,7 @@ public class MapFiles {
 	private static int getSize(Building b){
 		return (15 + b.getEntrances().length + b.getApexes().length)*RescueConstants.INT_SIZE;
 	}
-	
+
 	private static int getSize(Node n){
 		return (6 + n.getEdges().length*7)*RescueConstants.INT_SIZE;
 	}

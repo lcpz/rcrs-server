@@ -51,7 +51,7 @@ public final class Registry {
 	/**
 	 * Create a new Registry with a particular name that uses the system
 	 * registry as a parent.
-	 * 
+	 *
 	 * @param name
 	 *            The name of this Registry.
 	 */
@@ -61,7 +61,7 @@ public final class Registry {
 
 	/**
 	 * Create a new Registry with a particular parent.
-	 * 
+	 *
 	 * @param parent
 	 *            The parent Registry.
 	 */
@@ -71,7 +71,7 @@ public final class Registry {
 
 	/**
 	 * Create a new Registry with a particular name and parent.
-	 * 
+	 *
 	 * @param name
 	 *            The name of this Registry.
 	 * @param parent
@@ -87,7 +87,7 @@ public final class Registry {
 
 	/**
 	 * Get the current Registry for this thread.
-	 * 
+	 *
 	 * @return The current Registry for this thread.
 	 */
 	public static Registry getCurrentRegistry() {
@@ -96,7 +96,7 @@ public final class Registry {
 
 	/**
 	 * Set the current Registry for this thread.
-	 * 
+	 *
 	 * @param r
 	 *            The current Registry for this thread.
 	 */
@@ -111,7 +111,7 @@ public final class Registry {
 
 	/**
 	 * Get the name of this registry.
-	 * 
+	 *
 	 * @return The name of this registry.
 	 */
 	public String getName() {
@@ -124,7 +124,7 @@ public final class Registry {
 	/**
 	 * Register an entity factory. This will register all entity URNs that the
 	 * factory knows about.
-	 * 
+	 *
 	 * @param factory
 	 *            The entity factory to register.
 	 */
@@ -137,7 +137,7 @@ public final class Registry {
 	/**
 	 * Register an entity URN and assign an EntityFactory for constructing
 	 * instances of this type.
-	 * 
+	 *
 	 * @param urn
 	 *            The urn to register.
 	 * @param factory
@@ -159,7 +159,7 @@ public final class Registry {
 	/**
 	 * Register a property factory. This will register all property URNs that
 	 * the factory knows about.
-	 * 
+	 *
 	 * @param factory
 	 *            The property factory to register.
 	 */
@@ -172,7 +172,7 @@ public final class Registry {
 	/**
 	 * Register a property URN and assign a PropertyFactory for constructing
 	 * instances of this type.
-	 * 
+	 *
 	 * @param urn
 	 *            The urn to register.
 	 * @param factory
@@ -194,7 +194,7 @@ public final class Registry {
 	/**
 	 * Register a message factory. This will register all message URNs that the
 	 * factory knows about.
-	 * 
+	 *
 	 * @param factory
 	 *            The message factory to register.
 	 */
@@ -207,7 +207,7 @@ public final class Registry {
 	/**
 	 * Register a message URN and assign a MessageFactory for constructing
 	 * instances of this type.
-	 * 
+	 *
 	 * @param urn
 	 *            The urn to register.
 	 * @param factory
@@ -231,7 +231,7 @@ public final class Registry {
 	 * null. This method will delegate to the
 	 * {@link #registerEntityFactory(EntityFactory) previously registered}
 	 * EntityFactory.
-	 * 
+	 *
 	 * @param urn
 	 *            The urn of the entity type to create.
 	 * @param id
@@ -252,7 +252,7 @@ public final class Registry {
 	 * null. This method will delegate to the
 	 * {@link #registerPropertyFactory(PropertyFactory) previously registered}
 	 * PropertyFactory.
-	 * 
+	 *
 	 * @param urn
 	 *            The urn of the property type to create.
 	 * @return A new Property object, or null if the urn is not recognised.
@@ -271,7 +271,7 @@ public final class Registry {
 	 * null. This method will delegate to the
 	 * {@link #registerMessageFactory(MessageFactory) previously registered}
 	 * MessageFactory.
-	 * 
+	 *
 	 * @param urn
 	 *            The urn of the message type to create.
 	 * @param data
@@ -292,7 +292,7 @@ public final class Registry {
 
 	/**
 	 * Get the entity factory for a URN, delegating to the parent if required.
-	 * 
+	 *
 	 * @param urn
 	 *            The URN to look up.
 	 * @return An EntityFactory, or null if the URN is not recognised.
@@ -310,7 +310,7 @@ public final class Registry {
 
 	/**
 	 * Get the property factory for a URN, delegating to the parent if required.
-	 * 
+	 *
 	 * @param urn
 	 *            The URN to look up.
 	 * @return A PropertyFactory, or null if the URN is not recognised.
@@ -328,7 +328,7 @@ public final class Registry {
 
 	/**
 	 * Get the message factory for a URN, delegating to the parent if required.
-	 * 
+	 *
 	 * @param urn
 	 *            The URN to look up.
 	 * @return A MessageFactory, or null if the URN is not recognised.

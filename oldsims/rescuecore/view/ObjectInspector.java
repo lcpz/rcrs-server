@@ -123,6 +123,6 @@ public class ObjectInspector extends JPanel implements ObjectSelectionListener, 
 			default:
 				throw new IllegalArgumentException("Unknown column: "+col);
 			}
-		}	
+		}
     }
 }

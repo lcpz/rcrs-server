@@ -12,7 +12,7 @@ import java.util.Iterator;
  */
 
 public class Fieryness extends GUILayer {
-	
+
 	private final static Color COLORS[] = new Color[] {
 		new Color(176, 176,  56, 128),	// HEATING
 		new Color(204, 122,  50, 128),	// BURNING
@@ -23,7 +23,7 @@ public class Fieryness extends GUILayer {
 		new Color(80, 60, 140, 128),	// SEVERE_DAMAGE
 		new Color(0, 0, 0, 255)			// BURNT_OUT
 	};
-	
+
 	@Override
 	public void paint(PaintEvent paintEvent) {
 		for (Iterator i = paintEvent.getWorld().getBuildings().iterator(); i.hasNext();) {

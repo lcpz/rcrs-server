@@ -40,7 +40,7 @@ public abstract class RescueObject implements java.io.Serializable {
 		id = 0;
 		knownProperties = null;
 		annotations = null;
-    } 
+    }
 
     /**
      * Adds an annotation to this object. This will overwrite any existing annotations
@@ -50,9 +50,9 @@ public abstract class RescueObject implements java.io.Serializable {
     	if(annotations == null)annotations = new HashMap();
     	annotations.put(key,annotation);
     }
-    
+
     /**
-     * Gets an annotation for the given String identifier. If no such annotation 
+     * Gets an annotation for the given String identifier. If no such annotation
      * exists this will return null.
      * @return The annotation.
      */
@@ -63,7 +63,7 @@ public abstract class RescueObject implements java.io.Serializable {
 		}
     	return annotations.get(key);
     }
-    
+
     /**
        Get this objects type
        @return The type of this object
@@ -369,7 +369,7 @@ public abstract class RescueObject implements java.io.Serializable {
 	//    public boolean updateProperty(int property, int timestamp, boolean newValue, Object source) throws UnknownPropertyException {
 	//		return updateProperty(getProperty(property),timestamp,newValue,source);
 	//    }
-    
+
     protected boolean setProperty(IntProperty p, int newValue, int timestamp, Object source) /*throws UnknownPropertyException*/ {
 		if (p.setValue(newValue,timestamp,source)){
 			firePropertyChanged(p.getType(),timestamp,source);
@@ -377,7 +377,7 @@ public abstract class RescueObject implements java.io.Serializable {
 		}
 		return false;
     }
-    
+
 	protected boolean setProperty(ArrayProperty p, int[] newValue, int timestamp, Object source) /*throws UnknownPropertyException*/ {
 		if (p.setValues(newValue,timestamp,source)){
 			firePropertyChanged(p.getType(),timestamp,source);
@@ -385,7 +385,7 @@ public abstract class RescueObject implements java.io.Serializable {
 		}
 		return false;
 	}
-	
+
     protected boolean updateProperty(IntProperty p, int newValue, int timestamp, Object source) /*throws UnknownPropertyException*/ {
 		if (p.updateValue(newValue,timestamp,source)){
 			firePropertyChanged(p.getType(),timestamp,source);
@@ -393,7 +393,7 @@ public abstract class RescueObject implements java.io.Serializable {
 		}
 		return false;
     }
-    
+
 	protected boolean updateProperty(ArrayProperty p, int[] newValue, int timestamp, Object source) /*throws UnknownPropertyException*/ {
 		if (p.updateValues(newValue,timestamp,source)){
 			firePropertyChanged(p.getType(),timestamp,source);
@@ -401,7 +401,7 @@ public abstract class RescueObject implements java.io.Serializable {
 		}
 		return false;
 	}
-	
+
 	/*
 	protected boolean updateProperty(Property p, int timestamp, boolean newValue, Object source) throws UnknownPropertyException {
 		if (p.updateValue(newValue,timestamp,source)){

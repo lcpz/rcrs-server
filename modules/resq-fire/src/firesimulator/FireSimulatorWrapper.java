@@ -59,7 +59,7 @@ public class FireSimulatorWrapper extends StandardSimulator implements GUICompon
 	public String getGUIComponentName() {
 		return "Fire simulator";
 	}
-	
+
     @Override
     protected void postConnect() {
         super.postConnect();
@@ -86,9 +86,9 @@ public class FireSimulatorWrapper extends StandardSimulator implements GUICompon
             }
         }
         sim.initialize();
-	
-		
-	
+
+
+
     }
 
     @Override
@@ -182,7 +182,7 @@ public class FireSimulatorWrapper extends StandardSimulator implements GUICompon
         }
         long end = System.currentTimeMillis();
         Logger.info("Time " + c.getTime() + " took " + (end - start) + "ms");
-		
+
 		if(fireSimulatorGUI != null) {
 			fireSimulatorGUI.refresh();
 		}

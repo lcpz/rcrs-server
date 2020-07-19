@@ -37,15 +37,15 @@ public class PaintEvent {
 	public ScreenTransformExt getTransform() {
 		return transform;
 	}
-	
+
 	public Simulator getSimulator() {
 		return simulator;
 	}
-	
+
 	public World getWorld() {
 		return world;
 	}
-	
+
 	public Building getSelectedBuilding() {
 		return selectedBuilding;
 	}
@@ -57,5 +57,5 @@ public class PaintEvent {
 	public int getMouseY() {
 		return mouseY;
 	}
-	
+
 }

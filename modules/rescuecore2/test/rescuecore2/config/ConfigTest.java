@@ -125,7 +125,7 @@ public class ConfigTest {
         // The int value should have been replaced by the value in INCLUDE_CONFIG
         assertEquals("2", config.getValue("int"));
         assertEquals("3.4", config.getValue("float"));
-        assertEquals("true", config.getValue("boolean"));        
+        assertEquals("true", config.getValue("boolean"));
     }
 
     @Test
@@ -137,7 +137,7 @@ public class ConfigTest {
         // The int value should have been replaced by the value in BASIC_CONFIG
         assertEquals("5", config.getValue("int"));
         assertEquals("3.4", config.getValue("float"));
-        assertEquals("true", config.getValue("boolean"));        
+        assertEquals("true", config.getValue("boolean"));
     }
 
     @Test
@@ -171,7 +171,7 @@ public class ConfigTest {
         // The int value should have been replaced by the value in INCLUDE_CONFIG
         assertEquals("2", config.getValue("int"));
         assertEquals("3.4", config.getValue("float"));
-        assertEquals("true", config.getValue("boolean"));        
+        assertEquals("true", config.getValue("boolean"));
     }
 
     @Test

@@ -59,7 +59,7 @@ public class VoiceChannel extends AbstractChannel {
     protected void pushImpl(AKSpeak speak, int originalSize) throws InvalidMessageException {
         if(speak==null)
         	return;
-        
+
     	EntityID agentID = speak.getAgentID();
         Entity e = world.getEntity(agentID);
         if (!(e instanceof Human)) {

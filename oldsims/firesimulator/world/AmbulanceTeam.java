@@ -11,7 +11,7 @@ public class AmbulanceTeam extends MovingObject {
 	public AmbulanceTeam(int id) {
 		super(id);
 	}
-	
+
 	public String getType(){
 		return "AMBULANCE_TEAM";
 	}

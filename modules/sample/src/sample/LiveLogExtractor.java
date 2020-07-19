@@ -88,7 +88,7 @@ public class LiveLogExtractor extends StandardViewer {
         teamLabel = new JLabel(teamName, JLabel.CENTER);
         scoreLabel = new JLabel("Score: Unknown", JLabel.CENTER);
         String mapdir=config.getValue("gis.map.dir").trim();
-        
+
 		String[] map_spl = mapdir.split("/");
 		int index = map_spl.length-1;
 		String mapname = map_spl[index].trim();
@@ -96,11 +96,11 @@ public class LiveLogExtractor extends StandardViewer {
 			mapname = map_spl[--index].trim();
 		if(mapname.equals("map"))
 			mapname = map_spl[--index].trim();
-			
-        
+
+
         String totalTime = config.getValue("kernel.timesteps");
         int channelCount=config.getIntValue("comms.channels.count")-1;//-1 for say
-        
+
         mapLabel=new JLabel(mapname+" ("+totalTime+") | "+(channelCount==0? "No Comm":channelCount+" channels"), JLabel.CENTER);
         timeLabel.setBackground(Color.WHITE);
         timeLabel.setOpaque(true);
@@ -111,11 +111,11 @@ public class LiveLogExtractor extends StandardViewer {
         scoreLabel.setBackground(Color.WHITE);
         scoreLabel.setOpaque(true);
         scoreLabel.setFont(timeLabel.getFont().deriveFont(Font.PLAIN, fontSize));
-        
+
         mapLabel.setBackground(Color.WHITE);
         mapLabel.setOpaque(true);
         mapLabel.setFont(timeLabel.getFont().deriveFont(Font.PLAIN, fontSize));
-        
+
         frame.add(viewer, BorderLayout.CENTER);
         // CHECKSTYLE:OFF:MagicNumber
         JPanel labels = new JPanel(new GridLayout(1, 4));
@@ -178,7 +178,7 @@ public class LiveLogExtractor extends StandardViewer {
 			}
 			System.exit(0);
 		    }
-		    
+
                 }
             });
     }
@@ -197,7 +197,7 @@ public class LiveLogExtractor extends StandardViewer {
         catch (IOException e) {
             System.out.println("Error writing file: " + e.getMessage());
         }
-        
+
     }
 
     private static void appendFile(String filename, String content) {
@@ -209,7 +209,7 @@ public class LiveLogExtractor extends StandardViewer {
         catch (IOException e) {
             System.out.println("Error writing file: " + e.getMessage());
         }
-        
+
     }
 
     public void writeImage(String filename) {
@@ -229,7 +229,7 @@ public class LiveLogExtractor extends StandardViewer {
         GraphicsConfiguration configuration = GraphicsEnvironment.getLocalGraphicsEnvironment()
         .getDefaultScreenDevice().getDefaultConfiguration();
         BufferedImage image = configuration.createCompatibleImage(imageViewer.getWidth(), imageViewer.getHeight(), Transparency.TRANSLUCENT);
-            
+
         //Render the component onto the image
         Graphics graphics = image.createGraphics();
         imageViewer.paint(graphics);

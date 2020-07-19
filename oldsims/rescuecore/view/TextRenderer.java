@@ -28,11 +28,11 @@ import java.awt.*;
 
 public class TextRenderer implements MapRenderer {
 	private Font f = new Font("Times",Font.BOLD,12);
-	
+
 	public void setFont(Font f){
 		this.f = f;
 	}
-	
+
 	public boolean canRender(Object o) {return (o instanceof Text);}
 
 	public Shape render(Object o, Memory memory, Graphics g, ScreenTransform transform) {

@@ -11,7 +11,7 @@ public class WorldInfo extends RescueObject {
 	public WorldInfo(int id) {
 		super(id);
 	}
-	
+
 	public String getType(){
 		return "WORLD";
 	}

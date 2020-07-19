@@ -235,7 +235,7 @@ public class Handy {
 	  byte[] result = new byte[2];
 	  result[0] = (byte)(value >> 8 & 0xFF);
 	  result[1] = (byte)(value & 0xFF);
-	  return result;	
+	  return result;
 	  }
 	*/
 

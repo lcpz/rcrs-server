@@ -15,7 +15,7 @@ import rescuecore2.config.Config;
 public interface WorldModelCreator extends EntityIDGenerator {
 	/**
 	 * Create a new WorldModel.
-	 * 
+	 *
 	 * @param config
 	 *            The config to use.
 	 * @return A new world model.
@@ -27,9 +27,9 @@ public interface WorldModelCreator extends EntityIDGenerator {
 
 	/**
 	 * Returns the scenario of the simulation
-	 * 
+	 *
 	 * @param config
-	 * @return a scenario 
+	 * @return a scenario
 	 */
 	public Scenario getScenario(Config config) throws DocumentException;
 }

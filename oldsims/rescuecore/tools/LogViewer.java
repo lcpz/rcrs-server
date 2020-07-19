@@ -28,7 +28,7 @@ public class LogViewer extends JPanel {
 	private Map map;
 	private Log log;
 	private int time;
-	
+
 	public static void main(String[] args) {
 		if (args.length==0) {
 			System.err.println("Usage: LogViewer <filename>");

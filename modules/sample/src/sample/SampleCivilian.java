@@ -95,7 +95,7 @@ public class SampleCivilian extends AbstractSampleAgent<Civilian> {
     @Override
     protected void think(int time, ChangeSet changed, Collection<Command> heard) {
         // If we're not hurt or buried run for a refuge!
-    	
+
     	Civilian me = me();
         // Remove all entities except me
         model.removeAllEntities();
@@ -117,7 +117,7 @@ public class SampleCivilian extends AbstractSampleAgent<Civilian> {
             LOG.info("Calling for help");
             say(HELP, time);
         }
-        
+
         if (damage == 0 && buriedness == 0) {
             // Run for the refuge
             List<EntityID> path = search.breadthFirstSearchForCivilian(me().getPosition(), refugeIDs);
@@ -138,13 +138,13 @@ public class SampleCivilian extends AbstractSampleAgent<Civilian> {
         LOG.info("Not moving: damage = " + damage + ", buriedness = " + buriedness);
         sendRest(time);
     }
-    
+
     protected List<EntityID> nearestRoad() {
     	int maxPathLength=20;
         List<EntityID> result = new ArrayList<EntityID>(maxPathLength);
         Set<EntityID> seen = new HashSet<EntityID>();
         EntityID current = ((Human)me()).getPosition();
-        
+
         for (int i = 0; i < maxPathLength; ++i) {
             result.add(current);
             seen.add(current);

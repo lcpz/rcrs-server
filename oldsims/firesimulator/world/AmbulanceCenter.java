@@ -14,7 +14,7 @@ public class AmbulanceCenter extends Building {
 	public AmbulanceCenter(int id) {
 		super(id);
 	}
-	
+
 	public String getType(){
 		return "AMBULANCE_CENTRE";
 	}
@@ -23,7 +23,7 @@ public class AmbulanceCenter extends Building {
 	public boolean isInflameable(){
 	    return Building.AMBULANCE_INFALMEABLE;
 	}
-	
+
 	public int getFieryness(){
 	    if(isInflameable())
 	        return super.getFieryness();

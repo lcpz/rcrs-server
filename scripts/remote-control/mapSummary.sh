@@ -37,7 +37,7 @@ for TEAM in $TEAM_SHORTHANDS; do
             cp $TEAM/snapshot-init.png snapshot-init.png
             convert -format png -thumbnail 400x300 -strip -quality 95 PNG8:snapshot-init.png snapshot-init-small.png
         fi
-        LOGFILES=$(ls $HOME/$LOGDIR/$DAY/kernel/*$NAME-$MAP.gz 2>/dev/null) 
+        LOGFILES=$(ls $HOME/$LOGDIR/$DAY/kernel/*$NAME-$MAP.gz 2>/dev/null)
         if [[ -f "$LOGFILES" && ! -f $MAP_EVALDIR/$LOGFILES ]]; then
             cp $LOGFILES $MAP_EVALDIR
         fi;

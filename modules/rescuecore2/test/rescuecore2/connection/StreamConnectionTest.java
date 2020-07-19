@@ -36,7 +36,7 @@ public class StreamConnectionTest extends ConnectionTestCommon {
                                                        0x00, 0x00, 0x00, 0x04, // Size of message
                                                        0x00, 0x00, 0x00, 0x00  // Message data
     };
-    
+
     // One byte short
     private static final byte[] SHORT_CONTENT = {0x00, 0x00, 0x00, 0x04,
                                                  0x01, 0x02, 0x03};

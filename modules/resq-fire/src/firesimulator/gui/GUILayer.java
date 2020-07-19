@@ -6,11 +6,11 @@ package firesimulator.gui;
  */
 
 public abstract class GUILayer {
-    
+
     abstract public void paint(PaintEvent paintEvent);
-    
+
     public String getString(PaintEvent paintEvent) {
         return null;
     }
-    
+
 }

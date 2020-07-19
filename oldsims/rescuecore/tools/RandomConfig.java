@@ -48,9 +48,9 @@ public class RandomConfig {
 		boolean allowTrappedAgents = false;
 		boolean bigFires = false;
 		boolean trappedCivilians = true;
-		
+
 		String dir = "";
-		
+
 		for (int i=0;i<args.length;++i) {
 			if (args[i].startsWith("-min-")) {
 				for (int j=0;j<allLimits.length;++j) {
@@ -89,11 +89,11 @@ public class RandomConfig {
 			else if (args[i].equalsIgnoreCase("-b") || args[i].equalsIgnoreCase("--big-fires")) {
 				bigFires = true;
 			}
-			
+
 			else if (args[i].equalsIgnoreCase("-d") || args[i].equalsIgnoreCase("--dir")) {
 				dir = args[i+1];
 			}
-			
+
 			else if (args[i].equalsIgnoreCase("-h") || args[i].equalsIgnoreCase("--help")) {
 				System.out.println("Usage: RandomConfig [options]");
 				System.out.println("This program will read from \"road.bin\", \"node.bin\" and \"building.bin\" and produce a randomised \"gisini.txt\"");
@@ -113,14 +113,14 @@ public class RandomConfig {
 			}
 		}
 		try {
-			
+
 			File parentDir = new File(dir);
 			File gisini = new File(parentDir, "gisini.txt");
-			
+
 			// Open the output
 
 			PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(gisini)));
-			
+
 			// Build the city data
 			allNodes = MapFiles.loadNodes(parentDir);
 			allRoads = MapFiles.loadRoads(parentDir);

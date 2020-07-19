@@ -23,7 +23,7 @@ public class StringHandler implements Handler {
 	private int timeStep = -1;
 	private JScrollPane pane;
 	private JTextArea notes;
-	
+
 	/* (non-Javadoc)
 	 * @see rescuecore.debug.Handler#getComponent()
 	 */

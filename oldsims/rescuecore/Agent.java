@@ -73,7 +73,7 @@ public abstract class Agent extends RescueComponent {
 	public final Command generateConnectCommand() {
             return new AKConnect(0,tempID,getClass().getName(),agentTypes);
 	}
-	
+
 	protected void appendCommand(Command c){
 		super.appendCommand(c);
 		if(debug)
@@ -209,7 +209,7 @@ public abstract class Agent extends RescueComponent {
 		byte[] msg = hear.getData();
 		byte channel = hear.getChannel();
 		//			System.out.println(Handy.getCommandTypeName(type)+" received by "+id+" from "+fromID+" - have already accepted "+numReceived+" messages of "+receiveMax+" this timestep");
-		
+
 		//		if (willListenHear(fromID) && canListen()) {
 		//		System.out.println("Hear from "+fromID+" to "+toID+" on channel "+channel);
 		hear(fromID,msg,channel);
@@ -266,7 +266,7 @@ public abstract class Agent extends RescueComponent {
 
 	/**
 	   Enable debugging
-	   @param file The File to log information to. 
+	   @param file The File to log information to.
 	*/
 	protected void enableDebug(String target) {
 		debug = true;

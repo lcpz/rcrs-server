@@ -5,7 +5,7 @@ package firesimulator.world;
  *
  */
 public interface WorldConstants {
-	
+
     public final static int TYPE_NULL = 0;
     public final static int TYPE_WORLD = 0x01;
     public final static int TYPE_ROAD = 0x02;
@@ -78,14 +78,14 @@ public interface WorldConstants {
 	public final static int PROPERTY_WATER_QUANTITY = 46;
 
 	public final static int PROPERTY_MAX = 46;
-	
+
 	static final int AK_EXTINGUISH 										= 0x86;
 	static final int AK_REST       											= 0x80;
 	static final int AK_MOVE       											= 0x81;
 	static final int AK_LOAD       											= 0x82;
 	static final int AK_UNLOAD     											= 0x83;
 	static final int AK_SAY        												= 0x84;
-	static final int AK_TELL       												= 0x85;	
+	static final int AK_TELL       												= 0x85;
 	//	static final int AK_STRETCH    											= 0x87;
 	static final int AK_RESCUE     											= 0x88;
 	static final int AK_CLEAR      											= 0x89;

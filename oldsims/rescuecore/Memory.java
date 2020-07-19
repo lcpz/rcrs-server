@@ -665,7 +665,7 @@ public abstract class Memory implements java.io.Serializable {
 		}
 		return all;
     }
-  
+
     /**
      * Gets the Road, if it exists, with a and b as head and tail.
      * @param a A node that is either head or tail of the road.

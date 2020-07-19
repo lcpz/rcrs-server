@@ -19,15 +19,15 @@ import org.apache.log4j.Logger;
  * @author tn
  *
  */
-public class World implements WorldConstants {   
+public class World implements WorldConstants {
     private static final Logger LOG = Logger.getLogger(World.class);
-    
+
     private Hashtable pool;
     private Collection extinguishRequests;
     private int time;
     private Collection updatelist;
     private Collection<Building> buildings;
-    private Collection firebrigades;	
+    private Collection firebrigades;
     //    private Collection streetNodes;
     //    private Collection roads;
     private int maxX;
@@ -39,14 +39,14 @@ public class World implements WorldConstants {
     public int SAMPLE_SIZE=5000;
     //    public float INITIAL_TEMP=20;
     public float AIR_CAPACITY=0.2f;
-    public float AIR_HEIGHT=30;	
-    public int CAPACITY;	
+    public float AIR_HEIGHT=30;
+    public int CAPACITY;
     public float maxDist;
     private boolean isInitialized;
     public Collection allWalls;
     private Long hashValue;
     private static World me;
-	
+
     public World(){
         me = this;
         hashValue=null;
@@ -62,25 +62,25 @@ public class World implements WorldConstants {
         maxY=Integer.MIN_VALUE;
         minX=Integer.MAX_VALUE;
         minY=Integer.MAX_VALUE;
-        isInitialized=false;		
+        isInitialized=false;
     }
-	
+
     public static World getWorld(){
         return me;
     }
-	
+
     public int getMaxX(){
         return maxX;
     }
-	
+
     public Iterator getExtinguishIterator(){
         return extinguishRequests.iterator();
     }
-	
+
     public void addExtinguishRequest(Object request){
-        extinguishRequests.add(request);		
+        extinguishRequests.add(request);
     }
-	
+
     public void clearExtinguishRequests(){
         extinguishRequests.clear();
         for(Iterator i=firebrigades.iterator();i.hasNext();){
@@ -88,24 +88,24 @@ public class World implements WorldConstants {
             fb.nextCycle();
         }
     }
-	
+
     public boolean isIntialized(){
         return isInitialized;
     }
-	
+
     public int getMaxY(){
         return maxY;
     }
-	
+
     public int getMinX(){
         return minX;
     }
-	
+
     public int getMinY(){
         return minY;
     }
-	
-    private void loadVars(){		
+
+    private void loadVars(){
         SAMPLE_SIZE=new Integer(Configuration.getValue("resq-fire.cell_size")).intValue();
         Building.concreteBurning=new Float(Configuration.getValue("resq-fire.concrete_burning")).floatValue();
         Building.concreteCapacity=new Float(Configuration.getValue("resq-fire.concrete_capacity")).floatValue();
@@ -132,20 +132,20 @@ public class World implements WorldConstants {
         FireBrigade.REFILL_HYDRANT_QUANTITY=new Integer(Configuration.getValue("resq-fire.water_hydrant_refill_rate")).intValue();
         FireBrigade.MAX_WATER_QUANTITY=new Integer(Configuration.getValue("resq-fire.water_capacity")).intValue();
     }
-	
-    public void initialize(){	
+
+    public void initialize(){
         LOG.info("World initialising");
         loadVars();
         allWalls.clear();
         clearExtinguishRequests();
-        initializeBuildings();				
-        //        initializeRoads();		
+        initializeBuildings();
+        //        initializeRoads();
         initializeAir();
         igniteGISFires();
-        isInitialized=true;		
+        isInitialized=true;
         LOG.info("World initialised");
     }
-	
+
 
     /*
     private void initializeRoads() {
@@ -171,15 +171,15 @@ public class World implements WorldConstants {
                 if(ap[n]<minY)minY=ap[n];
             }
             b.initialize(this);
-        }		
+        }
         maxDist=(float)Math.sqrt(((maxX-minX)*(maxX-minX))+((maxY-minY)*(maxY-minY)));
-        initRayValues();		
+        initRayValues();
     }
-	
-    private void initRayValues() {		
+
+    private void initRayValues() {
         long hash=hash();
         boolean loaded=false;
-        String fname=Configuration.getValue("resq-fire.rays.dir") + "/" + hash + ".rays";			
+        String fname=Configuration.getValue("resq-fire.rays.dir") + "/" + hash + ".rays";
         try{
             File f=new File(fname);
             BufferedReader br=new BufferedReader(new FileReader(f));
@@ -203,7 +203,7 @@ public class World implements WorldConstants {
             }
             loaded=true;
             LOG.info("loaded radiation sample file \""+fname+"\"");
-        }catch(Exception e){			
+        }catch(Exception e){
             LOG.warn("unable to load radiation sample file \""+fname+"\", sampling:");
             int n=0;
             long t1=System.currentTimeMillis();
@@ -216,15 +216,15 @@ public class World implements WorldConstants {
                 long sec=dt/(1000);
                 long min=(sec/60)%60;
                 long hour=sec/(60*60);
-                sec=sec%60;				
+                sec=sec%60;
                 LOG.info(" time left: ca. "+hour+":"+min+":"+sec);
-            }	
-        }		
+            }
+        }
         try{
             if(!loaded){
                 File f=new File(fname);
-                f.createNewFile();				
-                BufferedWriter bw=new BufferedWriter(new FileWriter(f));				
+                f.createNewFile();
+                BufferedWriter bw=new BufferedWriter(new FileWriter(f));
                 bw.write(Wall.RAY_RATE+"\n");
                 for(Building b : buildings) {
                     bw.write(b.getX()+"\n");
@@ -238,7 +238,7 @@ public class World implements WorldConstants {
                 }
                 bw.close();
                 LOG.info("wrote radiation sample file \""+fname+"\"");
-            }			
+            }
         }catch(Exception e){
             LOG.error("error while writting radiation sample file \""+fname+"\"", e);
         }
@@ -251,7 +251,7 @@ public class World implements WorldConstants {
                 return b;
         }
         LOG.error("parser error");
-        throw new NullPointerException();		
+        throw new NullPointerException();
     }
 
     public float getMaxDistance(){
@@ -261,7 +261,7 @@ public class World implements WorldConstants {
     private void initializeAir() {
         LOG.info("World width: " + (maxX - minX) + "mm");
         LOG.info("World height: " + (maxY - minY) + "mm");
-        int xSamples=1 + (maxX - minX) / SAMPLE_SIZE;		
+        int xSamples=1 + (maxX - minX) / SAMPLE_SIZE;
         int ySamples=1 + (maxY - minY) / SAMPLE_SIZE;
         LOG.info("grid cell size=" + SAMPLE_SIZE + "mm, x*y=" + xSamples + "*" + ySamples + " = " + (xSamples * ySamples));
         airTemp=new double[xSamples][ySamples];
@@ -282,7 +282,7 @@ public class World implements WorldConstants {
     public double[][] getAirTemp(){
         return airTemp;
     }
-	
+
     public void setAirTemp(double[][] a){
         airTemp = a;
     }
@@ -298,31 +298,31 @@ public class World implements WorldConstants {
     public Collection<Building> getBuildings(){
         return buildings;
     }
-	
+
     public void addUpdate(RescueObject obj){
         updatelist.add(obj);
     }
-	
+
     public void clearUpdates(){
         updatelist.clear();
     }
-	
+
     public Collection getUpdates(){
         return updatelist;
     }
-	
+
     public int countObjects(){
         return pool.size();
     }
-	
+
     public int getTime(){
         return time;
     }
-	
+
     public RescueObject getObject(int ID){
         return (RescueObject)pool.get(new Integer(ID));
     }
-	
+
     public void putObject(RescueObject obj){
         pool.put(new Integer(obj.getID()),obj);
         if (obj instanceof FireBrigade) {
@@ -342,11 +342,11 @@ public class World implements WorldConstants {
             ((MovingObject) obj).setWorld(this);
         }
     }
-	
+
     public void setTime(int time){
         this.time=time;
     }
-	
+
     /*
     public void processChangeSet(InputBuffer data, int time){
         setTime(time);
@@ -364,7 +364,7 @@ public class World implements WorldConstants {
             }
         }
     }
-	
+
     private void setProperty(InputBuffer data, RescueObject obj, String urn) {
         int size = data.readInt();
         int[] val;
@@ -387,7 +387,7 @@ public class World implements WorldConstants {
             obj.input(urn, val);
         }
     }
-	 
+
     private RescueObject createObject(String urn, int id){
         RescueObject obj=null;
         if (urn.equals("BUILDING")) {
@@ -456,14 +456,14 @@ public class World implements WorldConstants {
 
     public void reset() {
         loadVars();
-        setTime(0);				
+        setTime(0);
         resetAir();
         for(Iterator i=buildings.iterator();i.hasNext();((Building)i.next()).reset(this));
         for(Iterator i=firebrigades.iterator();i.hasNext();((FireBrigade)i.next()).reset());
         igniteGISFires();
     }
-	
-	
+
+
     private void resetAir() {
         for(int x=0;x<airTemp.length;x++)
             for(int y=0;y<airTemp[x].length;y++)
@@ -479,7 +479,7 @@ public class World implements WorldConstants {
             }
         }
     }
-	
+
 
 
     public Collection getFirebrigades() {
@@ -491,7 +491,7 @@ public class World implements WorldConstants {
     }
 
     /*
-    public void processCommands(InputBuffer data) {								
+    public void processCommands(InputBuffer data) {
         LOG.info("processing commands...");
         data.readInt(); // Skip the size
         data.readInt(); // Skip the simulator ID
@@ -505,7 +505,7 @@ public class World implements WorldConstants {
                 LOG.debug("EXTINGUISH");
                 int agentID = data.readInt();
                 data.readInt(); // Skip the command time
-                LOG.debug("fb.id="+agentID);					
+                LOG.debug("fb.id="+agentID);
                 FireBrigade source=(FireBrigade)getObject(agentID);
                 source.setCurrentAction(cmd);
                 int targetID = data.readInt();
@@ -526,29 +526,29 @@ public class World implements WorldConstants {
                 LOG.debug("Skipping " + size + " bytes");
                 data.skip(size);
             }
-        }	
+        }
     }
     */
 
-    public void printSummary() {		
+    public void printSummary() {
         LOG.debug("objects total: "+countObjects());
     }
-	
+
     public long hash(){
         if(hashValue==null){
             long sum=0;
             for(Iterator i=buildings.iterator();i.hasNext();){
-                Building b=(Building) i.next();				
-                int[] ap=b.getApexes();				
+                Building b=(Building) i.next();
+                int[] ap=b.getApexes();
                 for(int c=0;c<ap.length;c++){
                     if(Long.MAX_VALUE-sum<=ap[c]){
                         sum=0;
                     }
-                    sum+=ap[c];	
-                }					
-            }			
+                    sum+=ap[c];
+                }
+            }
             hashValue=new Long(sum);
-        }			
+        }
         return hashValue.longValue();
     }
 

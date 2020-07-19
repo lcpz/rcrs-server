@@ -26,7 +26,7 @@
       <menu-item type="action" class="traffic3.manager.gui.action.ClearAllAgentsAction"/>
       <menu-item type="action" class="traffic3.manager.gui.action.DeleteSelectionAction"/>
     </menu-item>
-    <menu-item type="list" name="select">    
+    <menu-item type="list" name="select">
       <menu-item type="action" class="traffic3.manager.gui.action.SelectAllAction"/>
       <menu-item type="action" class="traffic3.manager.gui.action.SelectAllAgentsAction"/>
       <menu-item type="action" class="traffic3.manager.gui.action.SelectByIdAction"/>

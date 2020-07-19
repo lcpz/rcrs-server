@@ -21,7 +21,7 @@ public class AreaIconLayer extends StandardEntityViewLayer<Area> {
     private static final ImageIcon REFUGE = new ImageIcon(BuildingLayer.class.getClassLoader().getResource("rescuecore2/standard/view/Refuge-" + ICON_SIZE + "x" + ICON_SIZE + ".png"));
     private static final ImageIcon HYDRANT = new ImageIcon(BuildingLayer.class.getClassLoader().getResource("rescuecore2/standard/view/Hydrant-" + ICON_SIZE + "x" + ICON_SIZE + ".png"));
     private static final ImageIcon GAS_STATION= new ImageIcon(BuildingLayer.class.getClassLoader().getResource("rescuecore2/standard/view/GasStation-" + ICON_SIZE + "x" + ICON_SIZE + ".png"));
-    
+
     /**
        Construct a building icon view layer.
      */

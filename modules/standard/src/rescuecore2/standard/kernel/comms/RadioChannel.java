@@ -35,7 +35,7 @@ public class RadioChannel extends AbstractChannel {
     	usedBandwidth += originalSize;
     	if(speak==null)
     		return;
-    	
+
         byte[] data = speak.getContent();
         if (usedBandwidth > bandwidth) {
             throw new InvalidMessageException("Discarding message on channel " + channelID + ": already used " + usedBandwidth + " of " + bandwidth + " bytes, new message is " + data.length + " bytes.");

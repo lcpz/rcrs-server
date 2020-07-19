@@ -625,8 +625,8 @@ public class Config {
                     Class<? extends Random> clazz = Class.forName(className).asSubclass(Random.class);
                     Logger.debug("Instantiating random number generator: " + className);
                     if ("".equals(seed)) {
-                        // Create a default seed from the current time. We don't need cryptographic 
-                        // strength here, and using the default constructor will exhaust /dev/random 
+                        // Create a default seed from the current time. We don't need cryptographic
+                        // strength here, and using the default constructor will exhaust /dev/random
                         // quickly, causing long delays on startup.
                         long mtime = new Date().getTime();
                         seed = String.valueOf(mtime);

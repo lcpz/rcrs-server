@@ -11,7 +11,7 @@ public class PoliceForce extends MovingObject {
 	public PoliceForce(int id) {
 		super(id);
 	}
-	
+
 	public String getType(){
 		return "POLICE_FORCE";
 	}

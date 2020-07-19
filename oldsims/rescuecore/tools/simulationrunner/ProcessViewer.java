@@ -50,7 +50,7 @@ public class ProcessViewer extends JPanel {
 			  PipedOutputStream out = new PipedOutputStream();
 			  PipedInputStream in = new PipedInputStream(out);
 			  filter.setInputStream(in);
-		    
+
 			  }
 			  catch (Exception e) {
 			  e.printStackTrace();

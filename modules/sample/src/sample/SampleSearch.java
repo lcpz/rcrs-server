@@ -27,7 +27,7 @@ public final class SampleSearch {
 	private Set<EntityID> buildingSet;
 	/**
 	 * Construct a new SampleSearch.
-	 * 
+	 *
 	 * @param world
 	 *            The world model to construct the neighbourhood graph from.
 	 */
@@ -52,7 +52,7 @@ public final class SampleSearch {
 
 	/**
 	 * Construct a new ConnectionGraphSearch.
-	 * 
+	 *
 	 * @param graph
 	 *            The connection graph in the form of a map from EntityID to the set of neighbouring EntityIDs.
 	 */
@@ -62,7 +62,7 @@ public final class SampleSearch {
 
 	/**
 	 * Set the neighbourhood graph.
-	 * 
+	 *
 	 * @param newGraph
 	 *            The new neighbourhood graph.
 	 */
@@ -72,7 +72,7 @@ public final class SampleSearch {
 
 	/**
 	 * Get the neighbourhood graph.
-	 * 
+	 *
 	 * @return The neighbourhood graph.
 	 */
 	public Map<EntityID, Set<EntityID>> getGraph() {
@@ -81,7 +81,7 @@ public final class SampleSearch {
 
 	/**
 	 * Do a breadth first search from one location to the closest (in terms of number of nodes) of a set of goals.
-	 * 
+	 *
 	 * @param start
 	 *            The location we start at.
 	 * @param goals
@@ -94,7 +94,7 @@ public final class SampleSearch {
 
 	/**
 	 * Do a breadth first search from one location to the closest (in terms of number of nodes) of a set of goals.
-	 * 
+	 *
 	 * @param start
 	 *            The location we start at.
 	 * @param goals

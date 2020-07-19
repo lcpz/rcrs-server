@@ -89,7 +89,7 @@ public abstract class AbstractChannel implements Channel {
         	throw new InvalidMessageException("Tried to push empty message to channel " + channelID);
         }
         Logger.debug("Pushing " + speak + " through channel " + channelID);
-        
+
         speak = applyInputNoise(speak);
         Logger.debug("Input noise result: " + speak);
 //        if (speak != null) {

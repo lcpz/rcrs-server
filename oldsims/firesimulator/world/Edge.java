@@ -19,23 +19,23 @@ public abstract class Edge extends StationaryObject {
 	public void setHead(int id){
 		headID=id;
 	}
-	
+
 	public void setTail(int id){
 		tailID=id;
 	}
-	
+
 	public void setLength(int length){
 		this.Length=length;
 	}
 
-	protected int getTailID() {	
+	protected int getTailID() {
 		return tailID;
 	}
 
 	protected int getHeadID() {
 		return headID;
 	}
-	
+
 	protected int length() {
 		return Length;
 	}

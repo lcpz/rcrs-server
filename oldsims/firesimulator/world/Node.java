@@ -11,10 +11,10 @@ public abstract class Node extends StationaryObject {
     int[] edgesID;
 
     public Node(int id) {
-        super(id);		
+        super(id);
     }
-	
+
     public void setEdges(int[] value){
-        edgesID=value;	
+        edgesID=value;
     }
 }

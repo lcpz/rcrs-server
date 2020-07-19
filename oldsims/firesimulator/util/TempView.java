@@ -13,7 +13,7 @@ import javax.swing.WindowConstants;
 public class TempView extends JFrame{
 
 	/**
-     * 
+     *
      */
     private static final long serialVersionUID = 1L;
     static float[][] keyColors={{1000,1,0,0},
@@ -21,14 +21,14 @@ public class TempView extends JFrame{
 												{100,0,1,0},
 												{50,0,0,1},
 												{20,0,0,0.8f},
-												{0,0,0,0}}; 
+												{0,0,0,0}};
 
 	public static void main(String[] args) {
 		TempView gt=new TempView();
 		gt.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		gt.setVisible(true);
 	}
-	
+
 	public void update(Graphics g){
 			g.setColor(Color.WHITE);
 			g.fillRect(0,0,getWidth(),getHeight());
@@ -43,7 +43,7 @@ public class TempView extends JFrame{
 				g.drawString(""+x*5+"�C",115,255-x);
 			}
 		}
-		
+
 	private Color interpolator(float temp,float[][]keys){
 			float[][] keyColors=keys;
 			int pos=0;
@@ -58,5 +58,5 @@ public class TempView extends JFrame{
 			float blue=(keyColors[pos-1][3]-keyColors[pos][3])*pc+keyColors[pos][3];
 			return new Color(red,green,blue);
 		}
-		
+
 }

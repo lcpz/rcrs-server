@@ -39,9 +39,9 @@ public class LogExtractor {
     private LogReader log;
     private List<ViewComponent> viewers;
     private int maxTime;
-    
+
     private int current_time;
-    WorldModel<? extends Entity> current_model = null; 
+    WorldModel<? extends Entity> current_model = null;
 
     /**
        Construct a LogViewer.
@@ -84,11 +84,11 @@ public class LogExtractor {
             System.out.println("Error: " + e.getMessage());
         }
     }
-    
+
     public int getTime() {
         return current_time;
     }
-    
+
     public boolean step() {
         if (current_time == maxTime) {
             return false;
@@ -96,17 +96,17 @@ public class LogExtractor {
         showTimestep(current_time + 1);
         return true;
     }
-    
+
     public void setDimension(int width, int height) {
         for (ViewComponent next : viewers) {
             next.setBounds(0, 0, width, height);
         }
     }
-    
+
     public double getScore() {
         return scoreFunction.score(current_model, new Timestep(current_time));
     }
-    
+
     public BufferedImage paintImage() {
         if (viewers.isEmpty()) {
             return null;
@@ -117,14 +117,14 @@ public class LogExtractor {
         GraphicsConfiguration configuration = GraphicsEnvironment.getLocalGraphicsEnvironment()
         .getDefaultScreenDevice().getDefaultConfiguration();
         BufferedImage image = configuration.createCompatibleImage(view.getWidth(), view.getHeight(), Transparency.TRANSLUCENT);
-            
+
         //Render the component onto the image
         Graphics graphics = image.createGraphics();
         view.paint(graphics);
         graphics.dispose();
         return image;
     }
-    
+
     public void writeImage(String filename) {
         BufferedImage bi = paintImage();
         File outfile = new File(filename);
@@ -135,7 +135,7 @@ public class LogExtractor {
             System.out.println("Error writing image: " + e.getMessage());
         }
     }
-        
+
 
     private void registerViewers(Config config) {
         viewers = new ArrayList<ViewComponent>();
@@ -160,7 +160,7 @@ public class LogExtractor {
         }
         return result;
     }
-    
+
     /**
        Launch a new LogViewer.
        @param args Command line arguments. Accepts only one argument: the name of a log file.
@@ -194,7 +194,7 @@ public class LogExtractor {
             }
             log.writeImage(outdir + "/snapshot-final.png");
             writeFile(outdir + "/final-score.txt", ""+ log.getScore());
-            
+
             StringBuffer scoreString = new StringBuffer();
             for (Double score : scores) {
                 if (scoreString.length() != 0) {
@@ -216,7 +216,7 @@ public class LogExtractor {
 
         System.exit(0);
     }
-    
+
     private static void writeFile(String filename, String content) {
         try {
             PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(filename)));
@@ -226,7 +226,7 @@ public class LogExtractor {
         catch (IOException e) {
             System.out.println("Error writing file: " + e.getMessage());
         }
-        
+
     }
 
     private static void printUsage() {

@@ -16,7 +16,7 @@ case "$1" in
 	if [ ! -z "$2" ]; then
 	    $(dirname $0)/syncClients.sh $CODEDIR/$2 $CODEDIR/
 	else
-	    $(dirname $0)/syncClients.sh $CODEDIR 
+	    $(dirname $0)/syncClients.sh $CODEDIR
 	fi
 	;;
 

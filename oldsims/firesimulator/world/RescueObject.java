@@ -10,28 +10,28 @@ import org.apache.log4j.Logger;
  */
 public abstract class RescueObject implements WorldConstants {
     int id;
-	
+
     public RescueObject(int id){
         this.id=id;
     }
-	
+
     public boolean isStationary(){
         return false;
     }
-		
+
     public int hashCode(){
         return id;
     }
-	
+
     public boolean equals( Object o ) {
         if (!(o instanceof RescueObject)) {
             return false;
         }
         return this.id == ((RescueObject)o).id;
     }
-		
+
     public abstract String getType();
-		
+
     public int getID(){
         return id;
     }

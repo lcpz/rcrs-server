@@ -300,15 +300,15 @@ public class RescueMap{
 			edges[i] = ((Integer)es.get(i)).intValue();
 		return edges;
 	}
-	
+
 	/**
 	 * Writes the RescueMap to files in the current directory.
 	 */
 	public void toFile() throws IOException {
 		toFile(null);
 	}
-	
-	
+
+
 	/**
 	 * Writes this RescueMap to three files - road.bin, building.bin and node.bin in the given parent directory
 	 **/
@@ -316,7 +316,7 @@ public class RescueMap{
 		// do road.bin
 		File road = new File(parentDir, "road.bin");
 		DataOutputStream out = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(road)));
-		
+
 		writeInt(out,0);
 		writeInt(out,0);
 		writeInt(out,0);
@@ -350,7 +350,7 @@ public class RescueMap{
 		//do building.bin
 		File building = new File(parentDir, "building.bin");
 		out = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(building)));
-		
+
 		int[] bIds = new int[buildingCount];
 		writeInt(out,0);
 		writeInt(out,0);
@@ -386,7 +386,7 @@ public class RescueMap{
 		// do node.bin
 		File node = new File(parentDir, "node.bin");
 		out = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(node)));
-		
+
 		writeInt(out,0);
 		writeInt(out,0);
 		writeInt(out,0);

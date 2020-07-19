@@ -52,7 +52,7 @@ public class GMLWorldModelCreator implements WorldModelCreator {
 	private static final String BUILDING_CODE_PLACEMENT_TYPE = "gis.map.building-code-placement.random";
 	private static final String RANDOM_BUILDING_CODE_RATE = "gis.map.building-code-placement.random.code-rate.";
 	private static final String MAX_BUILDING_CODE = "gis.map.max-building-code";
-	
+
 	private static final double SQ_MM_TO_SQ_M = 0.000001;
 
 	private GisScenario scenario;
@@ -116,7 +116,7 @@ public class GMLWorldModelCreator implements WorldModelCreator {
 			}
 		}
 
-		
+
 		int maxBuildingCode = config.getIntValue(MAX_BUILDING_CODE, 2);
 		boolean randomBuildingCodePlacement = config.getBooleanValue(BUILDING_CODE_PLACEMENT_TYPE, false);
 		int[] buildingCodeRates = null;
@@ -130,13 +130,13 @@ public class GMLWorldModelCreator implements WorldModelCreator {
 			}
 		}
 
-		
+
 		GMLMap map = (GMLMap) MapReader.readMap(mapFile);
 		CoordinateConversion conversion = getCoordinateConversion(map);
 		LOG.debug("Creating entities");
 		LOG.debug(map.getBuildings().size() + " buildings");
 		LOG.debug(map.getRoads().size() + " roads");
-		
+
 		for (GMLBuilding next : map.getBuildings()) {
 			// Create a new Building entity
 			EntityID id = new EntityID(next.getID());
@@ -160,7 +160,7 @@ public class GMLWorldModelCreator implements WorldModelCreator {
 					}
 				}
 			}
-			
+
 			int code = Math.min(maxBuildingCode, next.getCode());
 			if(randomBuildingCodePlacement){
 				int rnd = config.getRandom().nextInt(buildingCodesCumulative[maxBuildingCode]) + 1;
@@ -171,7 +171,7 @@ public class GMLWorldModelCreator implements WorldModelCreator {
 					}
 				}
 			}
-			
+
 			b.setFloors(floors);
 			b.setFieryness(0);
 			b.setBrokenness(0);

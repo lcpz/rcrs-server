@@ -50,7 +50,7 @@ public class KAHear extends Command {
 		in.readBytes(msg);
 	}
 
-	public void write(OutputBuffer out) {	
+	public void write(OutputBuffer out) {
 		out.writeInt(toID);
 		out.writeInt(fromID);
 		out.writeInt(channel);

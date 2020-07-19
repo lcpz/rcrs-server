@@ -16,12 +16,12 @@ import rescuecore2.scenario.compatibilities.CollapseSimCompatibaleScenarioV1_1;
 import rescuecore2.scenario.exceptions.UncompatibleScenarioException;
 
 /**
- * 
+ *
  * The Message class that contains after shocks' information and is sent from
  * kernel to collapse simulator in early cycles
- * 
+ *
  * @author Salim
- * 
+ *
  */
 public class KSAfterShocksInfo extends AbstractMessage {
 	private IntListComponent times;
@@ -29,7 +29,7 @@ public class KSAfterShocksInfo extends AbstractMessage {
 
 	/**
 	 * Reads the message from the inputstream and initiates its data.
-	 * 
+	 *
 	 * @param in
 	 * @throws IOException
 	 */
@@ -40,7 +40,7 @@ public class KSAfterShocksInfo extends AbstractMessage {
 
 	/**
 	 * Creates a message from the input scenario.
-	 * 
+	 *
 	 * @param aftershocks
 	 * @throws UncompatibleScenarioException
 	 */
@@ -68,7 +68,7 @@ public class KSAfterShocksInfo extends AbstractMessage {
 
 	/**
 	 * Creates a message from the input map.
-	 * 
+	 *
 	 * @param aftershocks
 	 */
 	public KSAfterShocksInfo(HashMap<Integer, Float> aftershocks) {
@@ -98,7 +98,7 @@ public class KSAfterShocksInfo extends AbstractMessage {
 	/**
 	 * Returns a map containing aftershocks' information. Key and value of the
 	 * map are time and intensity.
-	 * 
+	 *
 	 * @return float
 	 */
 	public HashMap<Integer, Float> getAftershocks() {

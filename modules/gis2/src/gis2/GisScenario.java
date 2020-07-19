@@ -125,7 +125,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Create a scenario from an XML document.
-	 * 
+	 *
 	 * @param doc
 	 *            The document to read.
 	 * @throws ScenarioException
@@ -138,7 +138,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Read scenario data from an XML document.
-	 * 
+	 *
 	 * @param doc
 	 *            The document to read.
 	 * @throws ScenarioException
@@ -219,7 +219,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Write scenario data to an XML document.
-	 * 
+	 *
 	 * @param doc
 	 *            The document to write to.
 	 */
@@ -276,7 +276,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Apply this scenario to a world model.
-	 * 
+	 *
 	 * @param model
 	 *            The world model to alter.
 	 * @param config
@@ -427,7 +427,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Get the set of fire locations.
-	 * 
+	 *
 	 * @return The set of fire locations.
 	 */
 	public Set<Integer> getFires() {
@@ -436,7 +436,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Get the set of refuge locations.
-	 * 
+	 *
 	 * @return The set of refuge locations.
 	 */
 	public Set<Integer> getRefuges() {
@@ -445,7 +445,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Get the set of GasStations locations.
-	 * 
+	 *
 	 * @return The set of GasStations locations.
 	 */
 	public Set<Integer> getGasStations() {
@@ -454,7 +454,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Get the set of hydrant locations.
-	 * 
+	 *
 	 * @return The set of hydrant locations.
 	 */
 	public Set<Integer> getHydrants() {
@@ -463,7 +463,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Get the list of civilian locations.
-	 * 
+	 *
 	 * @return The list of civilian locations.
 	 */
 	public Collection<Integer> getCivilians() {
@@ -472,7 +472,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Get the list of fire brigade locations.
-	 * 
+	 *
 	 * @return The list of fire brigade locations.
 	 */
 	public Collection<Integer> getFireBrigades() {
@@ -481,7 +481,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Get the list of fire station locations.
-	 * 
+	 *
 	 * @return The list of fire station locations.
 	 */
 	public Collection<Integer> getFireStations() {
@@ -490,7 +490,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Get the list of police force locations.
-	 * 
+	 *
 	 * @return The list of police force locations.
 	 */
 	public Collection<Integer> getPoliceForces() {
@@ -499,7 +499,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Get the list of police office locations.
-	 * 
+	 *
 	 * @return The list of police office locations.
 	 */
 	public Collection<Integer> getPoliceOffices() {
@@ -508,7 +508,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Get the list of ambulance team locations.
-	 * 
+	 *
 	 * @return The list of ambulance team locations.
 	 */
 	public Collection<Integer> getAmbulanceTeams() {
@@ -517,7 +517,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Get the list of ambulance centre locations.
-	 * 
+	 *
 	 * @return The list of ambulance centre locations.
 	 */
 	public Collection<Integer> getAmbulanceCentres() {
@@ -526,7 +526,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Set the set of fire locations.
-	 * 
+	 *
 	 * @param newLocations
 	 *            The new set of locations.
 	 */
@@ -537,7 +537,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Set the set of refuge locations.
-	 * 
+	 *
 	 * @param newLocations
 	 *            The new set of locations.
 	 */
@@ -548,7 +548,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Set the list of civilian locations.
-	 * 
+	 *
 	 * @param newLocations
 	 *            The new list of locations.
 	 */
@@ -559,7 +559,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Set the list of fire brigade locations.
-	 * 
+	 *
 	 * @param newLocations
 	 *            The new list of locations.
 	 */
@@ -570,7 +570,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Set the list of fire station locations.
-	 * 
+	 *
 	 * @param newLocations
 	 *            The new list of locations.
 	 */
@@ -581,7 +581,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Set the list of police force locations.
-	 * 
+	 *
 	 * @param newLocations
 	 *            The new list of locations.
 	 */
@@ -592,7 +592,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Set the list of police office locations.
-	 * 
+	 *
 	 * @param newLocations
 	 *            The new list of locations.
 	 */
@@ -603,7 +603,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Set the list of ambulance team locations.
-	 * 
+	 *
 	 * @param newLocations
 	 *            The new list of locations.
 	 */
@@ -614,7 +614,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Set the list of ambulance centre locations.
-	 * 
+	 *
 	 * @param newLocations
 	 *            The new list of locations.
 	 */
@@ -625,7 +625,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Add a fire.
-	 * 
+	 *
 	 * @param location
 	 *            The new fire location.
 	 */
@@ -635,7 +635,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Remove a fire.
-	 * 
+	 *
 	 * @param location
 	 *            The fire location to remove.
 	 */
@@ -645,7 +645,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Add a refuge.
-	 * 
+	 *
 	 * @param location
 	 *            The new refuge location.
 	 */
@@ -655,7 +655,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Remove a refuge.
-	 * 
+	 *
 	 * @param location
 	 *            The refuge location to remove.
 	 */
@@ -665,7 +665,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Add a hydrant.
-	 * 
+	 *
 	 * @param location
 	 *            The new hydrant location.
 	 */
@@ -675,7 +675,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Remove a hydrant.
-	 * 
+	 *
 	 * @param location
 	 *            The hydrant location to remove.
 	 */
@@ -685,7 +685,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Remove a GasStation.
-	 * 
+	 *
 	 * @param location
 	 *            The GasStation location to remove.
 	 */
@@ -695,7 +695,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Add a GasStation.
-	 * 
+	 *
 	 * @param location
 	 *            The new GasStation location.
 	 */
@@ -705,7 +705,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Add a civilian.
-	 * 
+	 *
 	 * @param location
 	 *            The new civilian location.
 	 */
@@ -715,7 +715,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Remove a civilian.
-	 * 
+	 *
 	 * @param location
 	 *            The civilian location to remove.
 	 */
@@ -725,7 +725,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Add a fire brigade.
-	 * 
+	 *
 	 * @param location
 	 *            The new fire brigade location.
 	 */
@@ -735,7 +735,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Remove a fire brigade.
-	 * 
+	 *
 	 * @param location
 	 *            The fire brigade location to remove.
 	 */
@@ -745,7 +745,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Add a fire station.
-	 * 
+	 *
 	 * @param location
 	 *            The new fire station location.
 	 */
@@ -755,7 +755,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Remove a fire station.
-	 * 
+	 *
 	 * @param location
 	 *            The fire station location to remove.
 	 */
@@ -765,7 +765,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Add a police force.
-	 * 
+	 *
 	 * @param location
 	 *            The new police force location.
 	 */
@@ -775,7 +775,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Remove a police force.
-	 * 
+	 *
 	 * @param location
 	 *            The police force location to remove.
 	 */
@@ -785,7 +785,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Add a police office.
-	 * 
+	 *
 	 * @param location
 	 *            The new police office location.
 	 */
@@ -795,7 +795,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Remove a police office.
-	 * 
+	 *
 	 * @param location
 	 *            The police office location to remove.
 	 */
@@ -805,7 +805,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Add an ambulance team.
-	 * 
+	 *
 	 * @param location
 	 *            The new ambulance team location.
 	 */
@@ -815,7 +815,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Remove an ambulance team.
-	 * 
+	 *
 	 * @param location
 	 *            The ambulance team location to remove.
 	 */
@@ -825,7 +825,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Add an ambulance centre.
-	 * 
+	 *
 	 * @param location
 	 *            The new ambulance centre location.
 	 */
@@ -835,7 +835,7 @@ public class GisScenario implements rescuecore2.scenario.Scenario,
 
 	/**
 	 * Remove an ambulance centre.
-	 * 
+	 *
 	 * @param location
 	 *            The ambulance centre location to remove.
 	 */

@@ -12,16 +12,16 @@ public class PoliceOffice extends Building {
 	public PoliceOffice(int id) {
 		super(id);
 	}
-	
+
 	public String getType(){
 		return "POLICE_OFFICE";
 	}
-	
+
 
 	public boolean isInflameable(){
 	    return Building.POLICE_INFALMEABLE;
 	}
-	
+
 	public int getFieryness(){
 	    if(isInflameable())
 	        return super.getFieryness();

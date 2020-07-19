@@ -112,7 +112,7 @@ public class RunSession implements SimulationConstants {
 			run(clients,teams[i],session);
 		}
 	}
-	
+
 	private static boolean sendSimulatorData(ClientInfo[] clients, Session session) throws IOException {
 		// Send all simulator data to simulation clients
  		for (int i=0;i<clients.length;++i) {

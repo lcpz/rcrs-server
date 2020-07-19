@@ -7,9 +7,9 @@ import rescuecore2.standard.entities.Building;
  * Building class that contains extra variables created, updated and used by the
  * Collapse Simulator only. This class is created in order to prevented
  * unnecessary changes to the Standard Building class.
- * 
+ *
  * @author Salim
- * 
+ *
  */
 public class CSBuilding {
 	/**
@@ -33,7 +33,7 @@ public class CSBuilding {
 
 	/**
 	 * Returns the building's collapse ratio
-	 * 
+	 *
 	 * @return
 	 */
 	public float getCollapsedRatio() {
@@ -42,7 +42,7 @@ public class CSBuilding {
 
 	/**
 	 * Changes the collapse ratio of the building to the input ratio
-	 * 
+	 *
 	 * @param collapsedRatio
 	 *            is a float
 	 */
@@ -53,7 +53,7 @@ public class CSBuilding {
 
 	/**
 	 * Adds the input ratio to the building's collapse ratio
-	 * 
+	 *
 	 * @param ratio
 	 *            is a float that represents the increased value of the collapse
 	 *            ratio
@@ -69,7 +69,7 @@ public class CSBuilding {
 
 	/**
 	 * Returns the extent that is still possible to collapse.
-	 * 
+	 *
 	 * @return a float representing the extent
 	 */
 	public double getRemainingToCollapse(double floorHeight) {

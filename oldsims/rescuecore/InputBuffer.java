@@ -113,7 +113,7 @@ public class InputBuffer {
 		};
 		return (RescueObject[])result.toArray(new RescueObject[0]);
     }
-    
+
 	public Command readCommand() {
 		int type = readInt();
 		if (type==RescueConstants.HEADER_NULL) return null;

@@ -101,7 +101,7 @@ public abstract class BuildingRenderer implements MapRenderer {
 				ys[i] = transform.toScreenY(apexes[i*2+1]);
 			}
 			RenderTools.setFillMode(g,mode,colour);
-			g.fillPolygon(xs,ys,xs.length);	
+			g.fillPolygon(xs,ys,xs.length);
 			return new Polygon(xs,ys,xs.length);
 		}
     }

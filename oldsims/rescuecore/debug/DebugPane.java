@@ -125,7 +125,7 @@ public class DebugPane extends JPanel{
 		else if (entry instanceof DebugEntry.IntPropertyUpdateEntry) {
 			int property = ((DebugEntry.IntPropertyUpdateEntry)entry).getProperty();
 			int value = ((DebugEntry.IntPropertyUpdateEntry)entry).getNewValue();
-			int id = ((DebugEntry.IntPropertyUpdateEntry)entry).getObjectID();	
+			int id = ((DebugEntry.IntPropertyUpdateEntry)entry).getObjectID();
 			RescueObject o = memory.lookup(id);
 			if (o!=null) {
 				Property p = o.getProperty(property);
@@ -137,14 +137,14 @@ public class DebugPane extends JPanel{
 		else if (entry instanceof DebugEntry.ArrayPropertyUpdateEntry) {
 			int property = ((DebugEntry.ArrayPropertyUpdateEntry)entry).getProperty();
 			int[] value = ((DebugEntry.ArrayPropertyUpdateEntry)entry).getNewValue();
-			int id = ((DebugEntry.ArrayPropertyUpdateEntry)entry).getObjectID();	
+			int id = ((DebugEntry.ArrayPropertyUpdateEntry)entry).getObjectID();
 			RescueObject o = memory.lookup(id);
 			if (o!=null) {
 				Property p = o.getProperty(property);
 				if (p instanceof ArrayProperty) {
 					((ArrayProperty)p).setValues(value,entry.getTimestep(),null);
 				}
-			}			
+			}
 		}
 		else if (entry instanceof DebugEntry.ObjectDebugEntry) {
 			Object obj = ((DebugEntry.ObjectDebugEntry)entry).getObject();
